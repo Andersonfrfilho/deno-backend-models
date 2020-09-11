@@ -16,7 +16,7 @@ class UsersRepository {
   public all():Array<User>{
     return this.users;
   }
-  public findByEmail(email:string):User | null{
+  public findByEmail({email}:Omit<CreateUserDTO,"name"|"password"|"type">):User | null{
     return this.users.find(user=>user.email.toLowerCase()===email.toLowerCase()) || null;
   }
   public create({name,email,password,type}:CreateUserDTO): User{

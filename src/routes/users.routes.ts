@@ -9,7 +9,7 @@ router
 .get('/',({ request,response }: { request:Request,response: Response })=>{
   response.body = usersRepository.all()
 })
-.post('/', async ({ request, response }: { request: any; response: any })=>{
+.post('/', async ({ request, response }: { request: Request; response: Response })=>{
   try{
 
     const {name,email,password,type} = await request.body().value;

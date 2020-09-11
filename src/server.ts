@@ -6,7 +6,8 @@ import routes from './routes/index.ts';
 
 app.use(routes.users.allowedMethods());
 app.use(routes.users.routes());
-
+app.use(routes.sessions.allowedMethods());
+app.use(routes.sessions.routes());
 
 app.addEventListener("listen", ({ secure, hostname, port }) => {
   const {yellow,green} = colors;

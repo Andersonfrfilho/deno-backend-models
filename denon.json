@@ -3,7 +3,7 @@
   "watch": true,
   "scripts": {
     "start": {
-      "cmd": "deno run ./src/server.ts",
+      "cmd": "deno run --unstable ./src/server.ts",
       "desc": "run my app.ts file",
       "allow": [
         "run",
